@@ -38,7 +38,7 @@ define([
     },
 
     initialize: function(options){
-      _.bindAll(this, "job_loaded", "fill_attempt_html", "try_succeeded", "render");
+      _.bindAll(this, "job_loaded", "fill_attempt_html", "try_succeeded", "render", "fetch_and_render");
       this.jobs = options.jobs;
       this.form_view = options.form_view;
     },
@@ -267,7 +267,7 @@ define([
     },
 
     toggle_additional_info: function(e){
-      $('.fill_additional_info_row[data-id=' + $(e.currentTarget).data('id') + ']').toggle();
+      $('.fill_additional_info_row[data-id="' + $(e.currentTarget).data('id') + '"]').toggle();
     },
 
     view_all: function(e){
